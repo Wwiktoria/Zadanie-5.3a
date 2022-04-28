@@ -1,38 +1,30 @@
 #include <stdio.h>
 
 int main(void) {
-  int n,m,a,i,j;
-  int macierz_1[i][j];
-  int macierz_2[i][j];
-  
-  printf("Wprowadź liczbę wierszy:\n");
-  scanf("%d",&n);
-  printf("Wprowadź liczbę kolumn:\n");
-  scanf("%d",&m);
- 
-  for(i=0;i<n;i++){
-    for(j=0;j<m;j++){
-      printf("Wpisz liczbę: ");
-      scanf("%d",&macierz_1[i][j]);
-    
+  int m,n,i,j,a,wyraz;
+  int macierz[10][10];
+  int wynik;
+  printf("Wpisz liczbę wierszy macierzy: \n");
+  scanf("%d", &m);
+  printf("Wpisz liczbę kolumn macierzy: \n");
+  scanf("%d", &n);
+  printf("Wpisz liczbę przez którą chcesz pomnożyć macierz: \n");
+  scanf("%d", &a);
+
+  for (i=0; i<m; i++){
+    for(j=0; j<n; j++){
+      printf("Podaj elementy macierzy: \n");
+      scanf("%d", &macierz[i][j]);
     }
-    
   }
-
-   printf("Wpisz liczbę przez którą chcesz pomnożyć macierz: \n");
-  scanf("%d",&a);
-
-   for(i=0;i<n;i++){
-    for(j=0;j<m;j++){
-      macierz_2[i][j]=macierz_1[i][j]*a;
-      }}
+  printf("Macierz wynosi :\n");
   
-printf("Nowa macierz to:");
-  
-  for(i=0;i<=0;i++){
-    for(j=0;j<m;j++){
-      printf("%d", macierz_2[i][j]);
-      }}
-  
+  for(i=0; i<m; i++){
+    for(j=0; j<n; j++){
+      wynik = (macierz[i][j])*(a);
+      printf("%d ", wynik);
+    }
+    printf("\n");
+  }
   return 0;
 }
